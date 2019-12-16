@@ -3,11 +3,13 @@ import com.google.common.cache.CacheStats
 import com.micronautics.cache._
 import org.scalatest._
 import org.scalatestplus.junit.JUnitRunner
-import org.scalatest.Matchers._
+import matchers.should.Matchers._
 import scala.concurrent.ExecutionContext.Implicits._
+import org.scalatest.matchers
+import org.scalatest.wordspec.AnyWordSpec
 
 @RunWith(classOf[JUnitRunner])
-class TestCaches extends WordSpec {
+class TestCaches extends AnyWordSpec {
   type Key = String
   type Value = String
 
