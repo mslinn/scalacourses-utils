@@ -1,12 +1,7 @@
 import com.micronautics.utils.Implicits._
-import org.junit.runner.RunWith
-import matchers.should.Matchers._
-import org.scalatest._
-import org.scalatestplus.junit.JUnitRunner
-import org.scalatest.matchers
+import org.scalatest.matchers.should.Matchers._
 import org.scalatest.wordspec.AnyWordSpec
 
-@RunWith(classOf[JUnitRunner])
 class TestThrowables extends AnyWordSpec {
   "Throwables" should {
     "work" in {

@@ -1,14 +1,9 @@
-import org.junit.runner.RunWith
 import com.google.common.cache.CacheStats
 import com.micronautics.cache._
-import org.scalatest._
-import org.scalatestplus.junit.JUnitRunner
-import matchers.should.Matchers._
-import scala.concurrent.ExecutionContext.Implicits._
-import org.scalatest.matchers
+import org.scalatest.matchers.should.Matchers._
 import org.scalatest.wordspec.AnyWordSpec
+import scala.concurrent.ExecutionContext.Implicits._
 
-@RunWith(classOf[JUnitRunner])
 class TestCaches extends AnyWordSpec {
   type Key = String
   type Value = String

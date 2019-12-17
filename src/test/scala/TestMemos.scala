@@ -1,12 +1,7 @@
 import com.micronautics.cache._
-import org.junit.runner.RunWith
-import org.scalatestplus.junit.JUnitRunner
-import org.scalatest._
-import matchers.should.Matchers._
-import org.scalatest.matchers
+import org.scalatest.matchers.should.Matchers._
 import org.scalatest.wordspec.AnyWordSpec
 
-@RunWith(classOf[JUnitRunner])
 class TestMemos extends AnyWordSpec {
   "Memoize trait" should {
     object MemoizeImpl extends Memoize {

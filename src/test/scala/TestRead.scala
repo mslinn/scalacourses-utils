@@ -1,11 +1,7 @@
 import com.micronautics.utils
-import org.junit.runner.RunWith
-import org.scalatest._
-import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
-@RunWith(classOf[JUnitRunner])
 class TestRead extends AnyWordSpec with Matchers {
   val fileName = "src/main/scala/com/micronautics/utils/package.scala"
 
