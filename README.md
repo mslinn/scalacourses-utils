@@ -10,7 +10,7 @@ Add this resolver:
 
 Add this dependency:
 
-    "com.micronautics" %% "scalacourses-utils" % "0.3.4" withSources()
+    "com.micronautics" %% "scalacourses-utils" % "0.3.5" withSources()
 
 ## Usage ##
 

@@ -70,7 +70,6 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
-//scalaVersion := "2.12.10"
 scalaVersion := "2.13.1"
 
 scmInfo := Some(
@@ -80,4 +79,4 @@ scmInfo := Some(
   )
 )
 
-version := "0.3.4"
+version := "0.3.5"
