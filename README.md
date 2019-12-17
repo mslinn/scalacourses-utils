@@ -12,11 +12,35 @@ Add this dependency:
 
     "com.micronautics" %% "scalacourses-utils" % "0.3.5" withSources()
 
-## Usage ##
+## Usage
 
-For enriched `Try`:
+### Reading from a File
 
+````scala
+import com.micronautics._
+
+// Read lines into a multiline string
+val multiLine1: String = utils.read("file.name")
+val multiLine2: String = utils.read(new java.io.File("file.name"))
+
+// Read lines into an List of String
+val lines1: List[String] = utils.readLines("file.name")
+val lines2: List[String] = utils.readLines(new java.io.File("file.name"))
 ````
+
+### Using
+
+````scala
+import com.micronautics._
+
+def readLines(file: File): List[String] =
+    utils.using(new BufferedReader(new FileReader(file)))
+       { reader => unfold(())(_ => Option(reader.readLine).map(_ -> ((): Unit))) }
+````
+
+### Enriched `Try`
+
+````scala
 import com.micronautics.utils.Implicits._
 
 val x: Try[Int] = Try {
@@ -29,9 +53,9 @@ val x: Try[Int] = Try {
 }
 ````
 
-For working with collections of `Try`:
+### Working with collections of `Try`:
 
-````
+````scala
 import com.micronautics.utils.Implicits._
 
 val tries = List(Try(6/0), Try("Happiness " * 3), Failure(new Exception("Drat!")), Try(99))
@@ -45,9 +69,9 @@ println(s"""sequenceWithFailures:
 	failures=$failures""")
 ````
 
-For working with caches:
+### Working with caches
 
-````
+````scala
 import com.google.common.cache.CacheStats
 import com.micronautics.cache._
 import scala.concurrent.ExecutionContext.Implicits._
