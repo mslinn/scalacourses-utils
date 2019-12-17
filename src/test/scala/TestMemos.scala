@@ -2,10 +2,12 @@ import com.micronautics.cache._
 import org.junit.runner.RunWith
 import org.scalatestplus.junit.JUnitRunner
 import org.scalatest._
-import org.scalatest.Matchers._
+import matchers.should.Matchers._
+import org.scalatest.matchers
+import org.scalatest.wordspec.AnyWordSpec
 
 @RunWith(classOf[JUnitRunner])
-class TestMemos extends WordSpec {
+class TestMemos extends AnyWordSpec {
   "Memoize trait" should {
     object MemoizeImpl extends Memoize {
       val compute: String => Unit = (_: String) => println("Compute1 was evaluated\n")

@@ -1,11 +1,13 @@
 import com.micronautics.utils.Implicits._
 import org.junit.runner.RunWith
-import org.scalatest.Matchers._
+import matchers.should.Matchers._
 import org.scalatest._
 import org.scalatestplus.junit.JUnitRunner
+import org.scalatest.matchers
+import org.scalatest.wordspec.AnyWordSpec
 
 @RunWith(classOf[JUnitRunner])
-class TestThrowables extends WordSpec {
+class TestThrowables extends AnyWordSpec {
   "Throwables" should {
     "work" in {
       val fe1 = new Exception("message in a bottle").format()

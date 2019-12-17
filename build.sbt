@@ -26,7 +26,7 @@ javacOptions ++= Seq(
 libraryDependencies ++= Seq(
   "com.google.guava" %  "guava"     % "28.0-jre" withSources(),
   //
-  "org.scalatest"    %% "scalatest" % "3.0.8" % Test withSources(),
+  "org.scalatest"    %% "scalatest" % "3.1.0" % Test withSources(),
   "junit"            %  "junit"     % "4.12"  % Test
 )
 
