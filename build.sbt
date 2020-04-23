@@ -1,6 +1,6 @@
 cancelable := true
 
-crossScalaVersions := Seq("2.10.6", "2.11.12", "2.12.10", "2.13.1")
+crossScalaVersions := Seq("2.10.6", "2.11.12", "2.12.11", "2.13.2")
 
 developers := List(
   Developer("mslinn",
@@ -70,7 +70,7 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
-scalaVersion := "2.13.1"
+scalaVersion := "2.13.2"
 
 scmInfo := Some(
   ScmInfo(
